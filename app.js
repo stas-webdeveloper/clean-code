@@ -36,13 +36,14 @@ var createNewTaskElement = function (taskString) {
 
     label.innerText = taskString;
     label.className = 'task';
-    label.classList.add('label');
+    label.classList.add('list-item__label');
 
     //Each elements, needs appending
     checkBox.type = "checkbox";
+    checkBox.className = "list-item__checkbox";
     editInput.type = "text";
     editInput.className = "task";
-    editInput.classList.add('text');
+    editInput.classList.add('list-item__text');
 
     editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
     editButton.className = "edit";
