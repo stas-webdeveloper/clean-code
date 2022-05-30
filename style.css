@@ -114,7 +114,11 @@ button{
     align-items: center;
 }
 
-.list-item > * {
+.list-item__checkbox,
+.list-item__label,
+.list-item__text,
+.edit,
+.delit {
     vertical-align: middle;
 }
 
