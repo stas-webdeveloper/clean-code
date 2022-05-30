@@ -95,12 +95,16 @@ var editTask = function () {
     var containsClass = listItem.classList.contains("edit-mode");
     //If class of the parent is .edit-mode
     if (containsClass) {
+        editInput.classList.toggle('list-item__text--edit')
+        label.classList.toggle('list-item__label--edit')
 
         //switch to .edit-mode
         //label becomes the inputs value.
         label.innerText = editInput.value;
         editBtn.innerText = "Edit";
     } else {
+        editInput.classList.toggle('list-item__text--edit')
+        label.classList.toggle('list-item__label--edit')
         editInput.value = label.innerText;
         editBtn.innerText = "Save";
     }
@@ -128,6 +132,14 @@ var taskCompleted = function () {
 
     //Append the task list item to the #completed-tasks
     var listItem = this.parentNode;
+    // console.log('listItem:', listItem)
+    console.log('listItem.children:', listItem.children)
+    const arrListItem = Array.from(listItem.children)
+    arrListItem.forEach(item => {
+        if (item.classList.contains('list-item__label')) {
+            item.classList.toggle('list-item__label--completed')
+        }
+    })
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
 
@@ -140,6 +152,12 @@ var taskIncomplete = function () {
     //When the checkbox is unchecked
     //Append the task list item to the #incomplete-tasks.
     var listItem = this.parentNode;
+    const arrListItem = Array.from(listItem.children)
+    arrListItem.forEach(item => {
+        if (item.classList.contains('list-item__label')) {
+            item.classList.toggle('list-item__label--completed')
+        }
+    })
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskCompleted);
 }

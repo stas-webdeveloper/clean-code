@@ -9,7 +9,7 @@
 
 <body class="body">
     <header class="header">
-      <img class="header__img" src="./eisenhower-matrix.jpg" alt="eisenhower-matrix">
+        <img class="header__img" src="./eisenhower-matrix.jpg" alt="eisenhower-matrix">
         <a class="header__link" href="https://goal-life.com/page/method/matrix-eisenhower">
             Want more details?
         </a>
@@ -18,10 +18,10 @@
         <!-- HTML paragraphs can be any structural grouping of related content, such as images or form fields -->
         <p class="add-item" id="add-item">
             <label class="label add-item__title" for="new-task">Add Item</label>
-        <span class="new-task-wrap">
-            <input class="task add-item__text" id="new-task" type="text">
-            <button class="btn">Add</button>
-        </span>
+            <span class="new-task-wrap">
+                <input class="task add-item__text" id="new-task" type="text">
+                <button class="btn">Add</button>
+            </span>
         </p>
         <h3 class="list-name">Todo</h3>
         <ul class="tasks-list" id="incomplete-tasks">
@@ -36,8 +36,13 @@
             </li>
             <li class="list-item edit-mode">
                 <input class="list-item__checkbox" type="checkbox">
-                <label class="task list-item__label list-item__label--edit">Go Shopping</label>
-                <input class="task list-item__text list-item__text--edit" type="text" value="Go Shopping">
+                <label class="task
+                        list-item__label
+                        list-item__label--edit">Go Shopping
+                </label>
+                <input class="task
+                        list-item__text
+                        list-item__text--edit" type="text" value="Go Shopping">
                 <button class="btn edit">Save</button>
                 <button class="btn delete">
                     <img class="delete-img" src="./remove.svg">
@@ -48,7 +53,10 @@
         <ul class="tasks-list completed-tasks" id="completed-tasks">
             <li class="list-item">
                 <input class="list-item__checkbox" type="checkbox" checked>
-                <label class="task list-item__label">See the Doctor</label>
+                <label class="task
+                        list-item__label
+                        list-item__label--completed">See the Doctor
+                </label>
                 <input class="task list-item__text" type="text">
                 <button class="btn edit">Edit</button>
                 <button class="btn delete">

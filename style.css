@@ -144,7 +144,7 @@ button{
 }
 
 /* Completed */
-.completed-tasks .list-item__label {
+.list-item__label--completed {
     text-decoration: line-through;
     color: #888;
 }
@@ -154,12 +154,12 @@ button{
     display: none;
 }
 
-.edit-mode .list-item__text {
+.list-item__text--edit {
     display: inline-block;
     width: 224px;
 }
 
-.edit-mode .list-item__label {
+.list-item__label--edit {
     display: none;
 }
 
