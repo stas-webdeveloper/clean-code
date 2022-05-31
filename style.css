@@ -62,7 +62,7 @@ button{
 }
 
 .btn:hover {
-    color: #3a3A3a;
+    color: #3a3a3a;
 }
 
 /* Heading */
@@ -77,20 +77,22 @@ button{
     text-transform: uppercase;
 }
 
-.list-item__text {
+.list-item__text,
+.add-item__text {
     margin: 0;
     font-size: 18px;
     line-height: 18px;
     height: 21px;
     padding: 0 9px;
-    border: 1px solid #dDd;
-    background: #FFF;
+    border: 1px solid #ddd;
+    background: #fff;
     border-radius: 6px;
     font-family: Lato, sans-serif;
     color: #888;
 }
 
-.list-item__text:focus {
+.list-item__text:focus,
+.add-item__text:focus {
     color: #333;
 }
 
@@ -114,7 +116,11 @@ button{
     align-items: center;
 }
 
-.list-item > * {
+.list-item__checkbox,
+.list-item__label,
+.list-item__text,
+.edit,
+.delit {
     vertical-align: middle;
 }
 
